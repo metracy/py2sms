@@ -8,19 +8,21 @@
                                                    
 
 import subprocess
+import os
 
 def sms(pnumber,msg):
     sysmsg = 'curl http://textbelt.com/text -d number=' + str(pnumber) + ' -d ' + '\"message=' + str(msg) + '\"'
-    subprocess.call(sysmsg.split(' '))
+    os.system(sysmsg)
+    #subprocess.call(sysmsg.split(' '))
     ##subprocess.check_output returns a string of output of the command too
     ##useful if you want to check the value returned to verify if the message sent
-    output = subprocess.check_output(sysmsg.split(' '))
-    if 'error' in output.lower():
-        print("Message: " + message + " failed to send to " + str(pnumber))
-    elif 'false' in output.lower():
-        print("Message: " + message + " failed to send to " + str(pnumber))
-    else:
-        print("Message: " + msg + " sent to phone number: " + str(pnumber))
+    #output = subprocess.check_output(sysmsg.split(' '))
+    #if 'error' in output.lower():
+    #    print("Message: " + message + " failed to send to " + str(pnumber))
+    #elif 'false' in output.lower():
+    #    print("Message: " + message + " failed to send to " + str(pnumber))
+    #else:
+    print("Message: " + msg + " sent to phone number: " + str(pnumber))
 
 # To send a text message call the function with
 # sms(phonenumber,'sending this text message')
