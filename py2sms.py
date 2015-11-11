@@ -8,7 +8,9 @@ d8888b. db    db .d888b. .d8888. .88b  d88. .d8888.
 '''                                                   
 
 import subprocess as sp
-#YOU WILL NEED TO CHANGE THE BELOW TO YOUR KEY AND YOUR SECRET AFTER YOU REGISTER WITH SINCH.COM
+#YOU WILL NEED TO CHANGE THE BELOW TO YOUR KEY AND YOUR SECRET AFTER YOU REGISTER WITH SINCH.
+#REGISTER for free at https://www.sinch.com/products/sms-api/ <----------- pretty easy
+
 key = '549e8c36-0ff9-49dd-87e8-02cbac532c3a' #your key here
 secret = 'EEHQnEBLtUGwzJdf+OWA1w==' #your secret here
 
