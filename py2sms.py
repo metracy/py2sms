@@ -18,7 +18,7 @@ sysmsg[2] = '\"application\\%s:%s\"' % (key, secret)
 def sms(pnumber,msg):
     sysmsg[4] = '\'{\"message\":\"%s\"}\'' % (str(msg))
     sysmsg[7] = 'https://messagingapi.sinch.com/v1/sms/%s' % (str(pnumber))
-    sp.call(sysmsg)
+    sp.call(" ".join(sysmsg), shell = True)
     ##subprocess.check_output returns a string of output of the command too
     ##useful if you want to check the value returned to verify if the message sent
     #output = subprocess.check_output(sysmsg.split(' '))
