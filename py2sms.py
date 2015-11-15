@@ -10,6 +10,8 @@
                 d8'                                                           
                d8'    
 '''                                                   
+#Confirmed working on Ubuntu 14.04 and Linux Mint 17.2
+#Tested on a Win7 machine and was unable to send msg. No idea.
 
 import subprocess as sp
 #YOU WILL NEED TO CHANGE THE BELOW TO YOUR KEY AND YOUR SECRET AFTER YOU REGISTER WITH SINCH.
