@@ -23,7 +23,7 @@ secret = 'EEHQnEBLtUGwzJdf+OWA1w==' #your secret here
 sysmsg = ['curl','--user','key:secret','--data','msg','-H','\'Content-Type: application/json\'','phoneurl']
 sysmsg[2] = '\"application\\%s:%s\"' % (key, secret)
 
-#PUT the country code in front of phone number, I've only tested this with 1 for America. Because we #1 it works.
+#PUT the country code in front of phone number, I've only tested this with 1 for America. Because we #1 it works. ;)
 def sms(pnumber,msg):
     sysmsg[4] = '\'{\"message\":\"%s\"}\'' % (str(msg))
     sysmsg[7] = 'https://messagingapi.sinch.com/v1/sms/%s' % (str(pnumber))
