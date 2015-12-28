@@ -10,8 +10,11 @@
                 d8'                                                           
                d8'    
 '''                                                   
-#Confirmed working on Ubuntu 14.04 and Linux Mint 17.2
-#Tested on a Win7 machine and was unable to send msg. No idea.
+#
+#Simple script that uses the sinch.com sms-api to define a function that utilizes the curl command to send text messages
+#
+#Confirmed working on Ubuntu 14.04 and Linux Mint 17.2, and assume will work on OSX (though untested)
+#Untested on Win7 machine, may need to be modified.
 
 import subprocess as sp
 #YOU WILL NEED TO CHANGE THE BELOW TO YOUR KEY AND YOUR SECRET AFTER YOU REGISTER WITH SINCH.
@@ -23,7 +26,7 @@ secret = 'EEHQnEBLtUGwzJdf+OWA1w==' #your secret here
 sysmsg = ['curl','--user','key:secret','--data','msg','-H','\'Content-Type: application/json\'','phoneurl']
 sysmsg[2] = '\"application\\%s:%s\"' % (key, secret)
 
-#PUT the country code in front of phone number, I've only tested this with 1 for America. Because we #1 it works. ;)
+#PUT the country code in front of phone number, I've only tested this with 1 for America. Because we #1 it works ;). J/k just checked and we are 29 in science 35 in math =(
 def sms(pnumber,msg):
     sysmsg[4] = '\'{\"message\":\"%s\"}\'' % (str(msg))
     sysmsg[7] = 'https://messagingapi.sinch.com/v1/sms/%s' % (str(pnumber))
