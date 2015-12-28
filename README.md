@@ -1,1 +1,1 @@
-This is a simple script that utilizes the operating systems curl command and the sinch.com sms-api to send text messages using a defined function. Please see the py2sms.py file for more detail on how you would need to edit the file for functionaluse.
+This is a simple script that utilizes the operating system's curl command and the sinch.com sms-api to send text messages using a defined function. Please see the py2sms.py file for more detail on how you would need to edit the file for functional use.
